@@ -1,12 +1,16 @@
+import LanguageContext from "./LanguageContext.js"
+import { useContext} from 'react'
 
-
-
-function Footer() {
+const Footer = () => {
+  const languaCtx = useContext(LanguageContext)
+  const selectedChange = (e) => {
+       languaCtx.setLangua(e.target.value)
+  }
   return (
-    <div >
-     <select>
-       <option>vi</option>
-       <option>eng</option>
+    <div className="footer">
+     <select value={languaCtx.langua} onChange={selectedChange}>
+       <option value="en">en</option>
+       <option value="vi">vi</option>
      </select>
     </div>
   );

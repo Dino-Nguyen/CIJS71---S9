@@ -1,11 +1,13 @@
-
-
+import LoginContext from "./LoginContext";
+import { useContext} from 'react'
 
 function Header() {
+  const value = useContext(LoginContext)
   return (
-    <div >
-     Login header
-    </div>
+    <div className="header">
+     <div className="logo">MindX</div>
+     <div className="login">{value.user}</div>
+    </div> 
   );
 }
 

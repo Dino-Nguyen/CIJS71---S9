@@ -1,10 +1,9 @@
 import LoginForm from "./LoginForm";
 
 
-
 function Body() {
   return (
-    <div >
+    <div className="body" >
      <LoginForm/>
     </div>
   );

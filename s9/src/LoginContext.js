@@ -1,5 +1,6 @@
-import {createContext} from 'react'
+import { createContext } from 'react'
 
-const defaultValue = 'Login'
-const LoginContext = createContext(defaultValue)
+
+
+const LoginContext = createContext({user: 'Login'})
 export default LoginContext
